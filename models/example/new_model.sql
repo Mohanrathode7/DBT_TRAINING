@@ -12,8 +12,6 @@ with
         from mohan.practice.orderss
     )
 select
-    order_date,
-    sum(case when drank = 1 then 1 else 0 end) new_user,
-    sum(case when drank > 1 then 1 else 0 end) repeated_user
+    order_date
 from cte
 group by order_date
