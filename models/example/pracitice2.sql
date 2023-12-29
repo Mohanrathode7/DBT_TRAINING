@@ -16,4 +16,4 @@ select
     sum(case when drank = 1 then 1 else 0 end) new_user,
     sum(case when drank > 1 then 1 else 0 end) repeated_user
 from cte
-group by order_date
+group by order_date limit 0
